@@ -1,10 +1,19 @@
 [
   {
     "id": "browse-inventory",
-    "label": "Browse inventory",
-    "url": "/store",
+    "label": "Browse rentals",
+    "url": "/store/inventory?condition=rental",
     "style": "primary",
     "intent": "browse-inventory",
+    "newTab": false,
+    "active": true
+  },
+  {
+    "id": "request-rental",
+    "label": "Request a rental",
+    "url": "#reserve",
+    "style": "secondary",
+    "intent": "get-quote",
     "newTab": false,
     "active": true
   },

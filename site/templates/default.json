@@ -2,45 +2,106 @@
   "version": 2,
   "id": "default",
   "name": "Site template",
-  "conditions": [{ "type": "entireSite", "ref": null }],
+  "conditions": [
+    {
+      "type": "entireSite",
+      "ref": null
+    }
+  ],
   "nodes": [
     {
       "id": "header",
       "type": "section",
-      "props": { "width": "boxed", "paddingY": 3, "background": "card" },
+      "props": {
+        "width": "boxed",
+        "paddingY": 3,
+        "background": "paper"
+      },
       "children": [
         {
           "id": "header-row",
           "type": "row",
-          "props": { "gap": 5, "align": "center", "stackOn": "mobile" },
+          "props": {
+            "gap": 5,
+            "align": "center",
+            "stackOn": "mobile"
+          },
           "children": [
             {
               "id": "header-brand",
               "type": "column",
-              "props": { "span": 3, "align": "center" },
-              "children": [{ "id": "logo", "type": "logo", "props": { "url": "/", "height": 34 } }]
-            },
-            {
-              "id": "header-nav",
-              "type": "column",
-              "props": { "span": 6, "align": "center" },
+              "props": {
+                "span": 3
+              },
               "children": [
                 {
-                  "id": "main-nav",
-                  "type": "menu",
-                  "props": { "menuId": "main", "layout": "horizontal", "align": "center", "collapseOnMobile": true }
+                  "id": "logo",
+                  "type": "logo",
+                  "props": {
+                    "url": "/",
+                    "height": 90
+                  }
                 }
               ]
             },
             {
-              "id": "header-cta",
+              "id": "header-addr",
               "type": "column",
-              "props": { "span": 3, "align": "center" },
+              "props": {
+                "span": 4
+              },
               "children": [
                 {
-                  "id": "header-button",
-                  "type": "buttons",
-                  "props": { "items": [{ "ctaId": "browse-inventory" }], "align": "left" }
+                  "id": "header-addr-t",
+                  "type": "text",
+                  "props": {
+                    "text": "<strong>2804 US HIGHWAY 220<br>MADISON, NC 27025</strong>",
+                    "align": "center"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "header-contacts",
+              "type": "column",
+              "props": {
+                "span": 5
+              },
+              "children": [
+                {
+                  "id": "header-contacts-t",
+                  "type": "text",
+                  "props": {
+                    "text": "<strong>JEFF SELLERS</strong> <a href=\"tel:+13365527401\">(336) 552-7401</a><br><strong>JIMMY GREFENSTETTE</strong> <a href=\"tel:+13365203080\">(336) 520-3080</a><br><a href=\"mailto:jfsellers21@hotmail.com\">JFSELLERS21@HOTMAIL.COM</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "header-nav-row",
+          "type": "row",
+          "props": {
+            "gap": 2
+          },
+          "children": [
+            {
+              "id": "header-nav",
+              "type": "column",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "main-nav",
+                  "type": "menu",
+                  "props": {
+                    "menuId": "main",
+                    "layout": "horizontal",
+                    "align": "center",
+                    "collapseOnMobile": true
+                  }
                 }
               ]
             }
@@ -48,42 +109,184 @@
         }
       ]
     },
-    { "id": "content", "type": "contentArea", "props": { "label": "Page content" } },
     {
-      "id": "footer",
+      "id": "content",
+      "type": "contentArea",
+      "props": {
+        "label": "Page content"
+      }
+    },
+    {
+      "id": "sell-bar",
       "type": "section",
-      "props": { "width": "boxed", "paddingY": 7, "background": "ink" },
+      "props": {
+        "width": "boxed",
+        "paddingY": 3,
+        "background": "accent"
+      },
       "children": [
         {
-          "id": "footer-row",
+          "id": "sell-bar-row",
           "type": "row",
-          "props": { "gap": 6, "align": "start" },
+          "props": {},
           "children": [
             {
-              "id": "footer-brand",
+              "id": "sell-bar-col",
               "type": "column",
-              "props": { "span": 4 },
-              "children": [{ "id": "footer-logo", "type": "logo", "props": { "url": "/", "height": 28 } }]
-            },
-            {
-              "id": "footer-links",
-              "type": "column",
-              "props": { "span": 4 },
+              "props": {
+                "span": 12
+              },
               "children": [
-                { "id": "footer-nav", "type": "menu", "props": { "menuId": "footer", "layout": "vertical" } }
-              ]
-            },
-            {
-              "id": "footer-legal",
-              "type": "column",
-              "props": { "span": 4 },
-              "children": [
-                { "id": "legal-nav", "type": "menu", "props": { "menuId": "legal", "layout": "vertical" } }
+                {
+                  "id": "sell-bar-h",
+                  "type": "heading",
+                  "props": {
+                    "text": "Sell my truck",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                }
               ]
             }
           ]
         }
       ]
+    },
+    {
+      "id": "info",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 6
+      },
+      "children": [
+        {
+          "id": "info-row",
+          "type": "row",
+          "props": {
+            "gap": 6,
+            "stackOn": "mobile"
+          },
+          "children": [
+            {
+              "id": "info-hours",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "info-hours-h",
+                  "type": "heading",
+                  "props": {
+                    "text": "\u2605 Hours \u2605",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "hours",
+                  "type": "widget",
+                  "props": {
+                    "widget": "hours"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "info-contact",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "info-contact-h",
+                  "type": "heading",
+                  "props": {
+                    "text": "\u2605 Contact us \u2605",
+                    "headingLevel": 2,
+                    "align": "center"
+                  }
+                },
+                {
+                  "id": "info-contact-t",
+                  "type": "text",
+                  "props": {
+                    "text": "<strong>JEFF SELLERS</strong><br><a href=\"tel:+13365527401\">(336) 552-7401</a><br><br><strong>EMAIL US TODAY</strong><br><a href=\"mailto:jfsellers21@hotmail.com\">jfsellers21@hotmail.com</a>",
+                    "align": "center"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "type": "section",
+      "props": {
+        "width": "boxed",
+        "paddingY": 3,
+        "background": "accent"
+      },
+      "children": [
+        {
+          "id": "news-row",
+          "type": "row",
+          "props": {
+            "gap": 5,
+            "align": "center",
+            "stackOn": "mobile"
+          },
+          "children": [
+            {
+              "id": "news-h-col",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "news-h",
+                  "type": "heading",
+                  "props": {
+                    "text": "Join our newsletter",
+                    "headingLevel": 2
+                  }
+                }
+              ]
+            },
+            {
+              "id": "news-form-col",
+              "type": "column",
+              "props": {
+                "span": 6
+              },
+              "children": [
+                {
+                  "id": "news-form",
+                  "type": "form",
+                  "props": {
+                    "formId": "newsletter"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "type": "widget",
+      "props": {
+        "widget": "locations-map",
+        "config": {
+          "showMap": true
+        }
+      }
     }
   ]
 }
