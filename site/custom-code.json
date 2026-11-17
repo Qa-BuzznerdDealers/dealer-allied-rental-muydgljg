@@ -1,0 +1,4 @@
+{
+  "version": 1,
+  "css": "/* Call Us button on storefront inventory cards (the storefront draws it as a tel: link inside a card). */\n[class*=\"card\" i] a[href^=\"tel:\"] {\n  background: #b80000 !important;\n  border-color: #b80000 !important;\n  color: #fff !important;\n}\n[class*=\"card\" i] a[href^=\"tel:\"]:hover,\n[class*=\"card\" i] a[href^=\"tel:\"]:focus-visible {\n  background: #8b0000 !important;\n  border-color: #8b0000 !important;\n}\n"
+}
